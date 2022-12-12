@@ -10,7 +10,7 @@ const server = http.createServer(
             case "/home":
                 res.writeHead(200);
                 res.end(
-                    "<h1>This is Home Page</h1>"
+                    `<h1>This is Home Page</h1>`
                 );
             break;
             case "/about":
