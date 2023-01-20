@@ -1,2 +1,3 @@
 udemy_course/node_modules
 udemy_node_react/node_modules
+*.env

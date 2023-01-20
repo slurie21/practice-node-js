@@ -1,12 +1,12 @@
-/*const getPosts = (req, res) => {
-    res.send("Hellow world from node js");
-};
+const express = require('express');
+// const postController = require('../controllers/post');
+const { getPosts, createPost} = require('../controllers/post');
+const router = express.Router();
+const validator = require('../validation/index');
 
-module.exports = {
-    getPosts
-}
-*/
+router.get('/', getPosts);
+router.post('/post', validator.createPostValidtor, createPost);
 
-exports.getPosts = (req, res) => {
-    res.send("Hellow world from node js");
-};
+module.exports = router;
+
+
